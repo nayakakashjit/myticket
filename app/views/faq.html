@@ -1,0 +1,77 @@
+<style>
+
+.block{
+  background: linear-gradient(#3a4040, #3a4040);
+  color: #fff;
+  padding-top: 5px;
+  box-shadow: 0 1px 2px #ccc;
+}
+
+.block input[type='radio']:checked ~ .info{
+  height: 130px;
+  transition: .3s ease-in;
+}
+
+input[type='radio']{
+  width: 100%;
+  display: none;
+}
+
+label{
+  width: 450px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+span{
+  font-weight: bold;
+  display: block;
+  padding: 10px 12px 12px 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.info{
+  background: #fff;
+  color: #222;
+  width: 100%;
+  height: 0;
+  line-height: 2;
+  padding-left: 15px;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: .3s ease-out;
+} 
+
+
+
+
+</style>
+    <div class="faq">
+		<h3>Welcome to MyTicket Help</h3>
+</div>
+<div class="block">
+  <input type="radio" name="city" id="cityA" checked />   
+  <label for="cityA"><span>Question #1</span></label>
+  <div class="info">
+    <p>Samarkand is the second-largest city in Uzbekistan and the capital of Samarqand Province. The city is most noted for its central position on the Silk Road between China and the West, and for being an Islamic centre for scholarly study.
+    </p>
+  </div>
+</div>
+<div class="block">
+  <input type="radio" name="city" id="cityB"/>
+  <label for="cityB"><span>Question #2</span></label>
+  <div class="info">
+    <p>Tashkent is the capital of Uzbekistan and of the Tashkent Province. The officially registered population of the city in 2008 was about 2.2 million. Unofficial sources estimate the actual population may be as much as 4.45 million.</p>
+  </div>
+</div>
+<div class="block">
+  <input type="radio" name="city" id="cityC" />
+  <label for="cityC"><span>Question #3</span></label>
+  <div class="info">
+    <p>Bukhara, from the Soghdian βuxārak, is the capital of the Bukhara Province of Uzbekistan. The nation's fifth-largest city, it has a population of 263,400. 
+    </p>  
+  </div>
+</div>
+

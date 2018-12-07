@@ -1,0 +1,42 @@
+[
+    {
+        "image" : "assets/images/pic-1.jpg",
+         "name" : "Krishnamma Kalipindi Iddarini (U/A)" ,
+         "date" : "19 Jun, 2015"
+    },
+     {
+        "image" : "assets/images/pic-2.jpg",
+         "name" : "ABCD 2 (3D) (U)" ,
+         "date" : "19 Jun, 2015"
+    },
+    {
+        "image" : "assets/images/pic-3.jpg",
+         "name" : "Kerintha (U)" ,
+         "date" : "12 Jun, 2015"
+    },
+    {
+        "image" : "assets/images/pic-4.jpg",
+         "name" : "Insidious: Chapter 3 (A)" ,
+         "date" : "25 Jun, 2015" 
+    },
+    {
+        "image" : "assets/images/pic-5.jpg",
+         "name" : "Jurassic World (3D) (U/A)" ,
+         "date" : "11 Jun, 2015"
+    },
+    {
+        "image" : "assets/images/pic-10.jpg",
+         "name" : "Magic Mike XXL" ,
+         "date" : "11 Jun, 2015"
+    },
+    {
+        "image" : "assets/images/pic-12.jpg",
+         "name" : "Oru Thozan Oru Thozi" ,
+         "date" : "11 Jun, 2015"
+    },
+    {
+        "image" : "assets/images/pic-3.jpg",
+         "name" : "Amy" ,
+         "date" : "3 Jul, 2015"
+    }
+]

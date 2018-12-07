@@ -1,0 +1,298 @@
+<style>
+    .carousel {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .left-btn {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        background-color: #ff3241;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+
+    }
+
+    .right-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-color: #ff3241;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+    }
+</style>
+   
+   <div class="main-banner">
+    <div class="banner col-md-8">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="{{image}}" ng-class="{active:!$index}" ng-repeat="image in sliderMainMovieData"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item" ng-repeat="image in sliderMainMovieData"  ng-class="{active:!$index}">
+        <img ng-src="{{image.img}}" alt="Los Angeles" class="img-responsive" style="width:100%;height:356px">
+      </div>
+
+    </div>
+
+      
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+<!--<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />-->
+
+    </div>
+    <div class="col-md-4 banner-right">
+        <div class="decorative-container">
+            <div class="decorative-title">
+                <div class="decorative-bar left vertical thick"></div>
+                <div class="decorative-bar left horizontal thick"></div>
+                <div class="decorative-bar left horizontal thin"></div> <span>Instant Ticket Booking</span>
+                <div class="decorative-bar right vertical thick"></div>
+                <div class="decorative-bar right horizontal thick"></div>
+                <div class="decorative-bar right horizontal thin"></div>
+            </div>
+        </div>
+        <div class="grid_3 grid_5">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Movies</a></li>
+                  
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                        <div class="fleft">
+                            <label>
+                                <input type="radio"> <span class="fleft mr20">Movies</span></label>
+                            <label>
+                                <input type="radio"> <span class="fleft mr20">Cinemas</span></label>
+                        </div>
+                        <select class="list_of_movies">
+                            <option value="">Select Movie</option>
+                            <optgroup label="Telugu">
+                                <option style="padding-left: 10px;" value="ANAN">Asura (U/A)</option>
+                                <option style="padding-left: 10px;" value="CHDM">Jurassic World (2D Telugu) (U/A)</option>
+                                <option style="padding-left: 10px;" value="GUDR">Jurassic World (3D Telugu) (U/A)</option>
+                                <option style="padding-left: 10px;" value="GUNT">Jyothi Lakshmi (U/A)</option>
+                                <option style="padding-left: 10px;" value="JANG">Kerintha (U)</option>
+                                <option style="padding-left: 10px;" value="KAKI">Krishnamma Kalipindi Iddarini (U/A)</option>
+                                <option style="padding-left: 10px;" value="KURN">Lava Kusa (A)</option>
+                                <option style="padding-left: 10px;" value="MART">Pandaga Chesko (U/A)</option>
+                                <option style="padding-left: 10px;" value="PRVT">Tippu (A)</option>
+                                <option style="padding-left: 10px;" value="RAJA">Vinavayya Ramayya (U/A)</option>
+                            </optgroup>
+                            <optgroup label="Hindi">
+                                <option style="padding-left: 10px;" value="TAWA">ABCD 2 (3D) (U)</option>
+                                <option style="padding-left: 10px;" value="ZIRO">ABCD 2 (2D) (U)</option>
+                            </optgroup>
+                            <optgroup label="English">
+                                <option style="padding-left: 10px;" value="DIB">Jurassic World (3D) (U/A)</option>
+                                <option style="padding-left: 10px;" value="GUW">Guwahati</option>
+                            </optgroup>
+                        </select>
+                        <select class="list_of_movies">
+                            <option value="">Select Date</option>
+                            <option style="padding-left: 10px;" value="ANAN">Today, 18 jun</option>
+                            <option style="padding-left: 10px;" value="CHDM">Tomorrow, 19 jun</option>
+                            <option style="padding-left: 10px;" value="CHDM">saturday, 20 jun</option>
+                            <option style="padding-left: 10px;" value="CHDM">sunday, 21 jun</option>
+                        </select>
+                        <h5 class="pre"><i class="fa fa-heart"></i>Preferred Cinemas :</h5>
+                        <h6 class="ipre"><a href="#">Mayajaal Multiplex: Chennai, </a> <a href="#"> INOX: NCS Mall</a>, <a href="#">Vizianagaram</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<h3 class="m-head">Current Movies</h3>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <ui-carousel slides="currentMovieSliderService" slides-to-show="5" slides-to-scroll="1" on-init="onCarouselInit()" on-before-change="onCarouselBeforeChange()" on-after-change="onCarouselAfterChange()">
+
+            <!-- For slider render -->
+            <carousel-item>
+                <div class="nbs-flexisel-item">
+                    <a ui-sref="movie-single"><img src="{{item.img}}" alt="" /></a>
+                    <div class="slide-title">
+                        <h4>{{item.info}}</h4>
+                     </div>
+                    <div class="date-city">
+                        <h5>{{item.date}}</h5>
+                        <h6>{{item.city}}</h6>
+                        <div class="buy-tickets"> <a ui-sref="movie-select-show">BUY TICKETS</a> </div>
+                    </div>
+                </div>
+            </carousel-item>
+
+
+            <!-- For customize carousel next, previous button -->
+            <carousel-prev>
+                <!-- placed your previous button here -->
+                <button class="left-btn">Prev</button>
+                <!-- end -->
+            </carousel-prev>
+
+            <carousel-next>
+                <!-- placed your next button here -->
+                <button class="right-btn">Next</button>
+                <!-- end -->
+            </carousel-next>
+
+        </ui-carousel>
+        
+    </div>
+
+</div>
+
+<div class="footer-top-grid">
+    <div class="list-of-movies col-md-8">
+        <div class="clearfix"></div>
+        <div class="featured">
+            <h4>Featured</h4>
+            <ul>
+                <li ng-repeat="data in featuredMovieService ">
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a ui-sref="movie-single"><img ng-src="{{data.img}}" alt="" /></a>
+                        </div>
+                        <div class="f-movie-name"> <a href="movies.html">{{data.name}}</a>
+                            <p>{{data.city}}</p>
+                        </div>
+<!--                        <div class="f-buy-tickets"> <a href="movie-select-show.html">BUY TICKETS</a> </div>-->
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side-bar">
+        <div class="top-movies-in-india">
+            <div class="decorative-container">
+                <div class="decorative-title">
+                    <div class="decorative-bar left vertical thick"></div>
+                    <div class="decorative-bar left horizontal thick"></div>
+                    <div class="decorative-bar left horizontal thin"></div> <span>Top Movies in India</span>
+                    <div class="decorative-bar right vertical thick"></div>
+                    <div class="decorative-bar right horizontal thick"></div>
+                    <div class="decorative-bar right horizontal thin"></div>
+                </div>
+            </div>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>77%</li>
+                <li><a href="movie-single.html">Jurassic World (3D) (U/A)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>80%</li>
+                <li><a href="movie-single.html">Jurassic World (3D Hindi) (U/A)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>69%</li>
+                <li><a href="movie-single.html">Dil Dhadakne Do (U/A)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>65%</li>
+                <li><a href="movie-single.html">Hamari Adhuri Kahani (U)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>83%</li>
+                <li><a href="movie-single.html">Premam (U)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>87%</li>
+                <li><a href="movie-single.html">Tanu Weds Manu Returns (U/A)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>71%</li>
+                <li><a href="movie-single.html">Romeo Juliet (U)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>81%</li>
+                <li><a href="movie-single.html">Jurassic World (IMAX 3D) (U/A)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>80%</li>
+                <li><a href="movie-single.html">Jurassic World (2D Hindi) (U/A)</a></li>
+            </ul>
+            <ul class="mov_list">
+                <li><i class="fa fa-star"></i></li>
+                <li>89%</li>
+                <li><a href="movie-single.html">Kaaka Muttai (U)</a></li>
+            </ul>
+        </div>
+        <div class="quick-pay">
+            <div class="decorative-container">
+                <div class="decorative-title">
+                    <div class="decorative-bar left vertical thick"></div>
+                    <div class="decorative-bar left horizontal thick"></div>
+                    <div class="decorative-bar left horizontal thin"></div> <span>Quick Pay</span>
+                    <div class="decorative-bar right vertical thick"></div>
+                    <div class="decorative-bar right horizontal thick"></div>
+                    <div class="decorative-bar right horizontal thin"></div>
+                </div>
+            </div>
+            <p class="payText">Make your online payments a breeze. Save your Credit, Debit card and Netbanking in your BookMyShow profile.. <a href="#">Read more</a></p>
+        </div>
+        <div class="our-blog">
+            <div class="decorative-container">
+                <div class="decorative-title">
+                    <div class="decorative-bar left vertical thick"></div>
+                    <div class="decorative-bar left horizontal thick"></div>
+                    <div class="decorative-bar left horizontal thin"></div> <span>Our Blog</span>
+                    <div class="decorative-bar right vertical thick"></div>
+                    <div class="decorative-bar right horizontal thick"></div>
+                    <div class="decorative-bar right horizontal thin"></div>
+                </div>
+            </div>
+            <div class="post-article"> <a href="blog.html" class="post-title">Lorem Ipsum is simply dummy text of the printing</a> <i>Posted on June 15, 2015</i>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+                    <br> <a href="blog.html">Read more</a></p>
+            </div>
+            <div class="post-article"> <a href="blog.html" class="post-title">Sed ut perspiciatis unde</a> <i>Posted on June 15, 2015</i>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+                    <br> <a href="blog.html">Read more</a></p>
+            </div>
+            <div class="post-article"> <a href="blog.html" class="post-title">Sed ut perspiciatis unde</a> <i>Posted on June 15, 2015</i>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+                    <br> <a href="blog.html">Read more</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="footer-top-strip">
+    <p><span>Next Change <i>(Friday, 19 Jun) </i>: </span><a href="movie-single.html">Disney's ABCD 2 (3D) (U)</a>, <a href="movie-single.html"> 2 Premi Premache</a> , <a href="movie-single.html">Dekh Ke (Bhojpuri)</a> , <a href="movie-single.html">Disney's ABCD 2 (2D) (U)</a>, <a href="movie-single.html">Dekh Ke (Bhojpuri)</a></p>
+    <p><span>Coming Soon :</span><a href="movie-single.html"> 2 Premi Premache</a>, <a href="movie-single.html">Acharam, Dekh Ke (Bhojpuri)</a>, <a href="movie-single.html">Entourage</a>, <a href="movie-single.html">Kuttram Kadithal</a></p>
+</div>
+
+
+

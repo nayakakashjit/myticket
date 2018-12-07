@@ -1,0 +1,32 @@
+[
+    {
+        "img": "assets/images/f4.jpg",
+        "name": "Lorem Ipsum used since",
+        "city": "Multi-city"
+        },
+    {
+        "img": "assets/images/f5.jpg",
+        "name": "looked up one of more",
+        "city": "Multi-city"
+        },
+    {
+        "img": "assets/images/f6.jpg",
+        "name": "The Live Lorem Ipsum",
+        "city": "Banglore"
+        },
+    {
+        "img": "assets/images/f1.jpg",
+        "name": "The standard chunk",
+        "city": "Multi-city"
+        },
+    {
+        "img": "assets/images/f2.jpg",
+        "name": "There are many 'variations'",
+        "city": "Multi-city"
+        },
+    {
+        "img": "assets/images/f3.jpg",
+        "name": "The Live Tribute Show",
+        "city": "Multi-city"
+        }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "img": "assets/images/pic1.jpg"
+        , "cap": "Caption goes here"
+            }
+    , {
+        "img": "assets/images/pic2.jpg"
+        , "cap": "Caption goes here"
+            }
+    , {
+        "img": "assets/images/pic3.jpg"
+        , "cap": "Caption goes here"
+            }
+    , {
+        "img": "assets/images/pic4.jpg"
+        , "cap": "Caption goes here"
+            }
+    ]

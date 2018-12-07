@@ -1,0 +1,190 @@
+<div class="now-showing-list">
+    <div class="col-md-3 movies-by-category">
+        <h5>Refine Your Search</h5>
+        <input type="text" class="text" value="Search for a movie name" onfocus="this.value = '';" onblur="if (this.value == 'Enter email...') {this.value = 'Search for a movie name';}">
+        <div class="search-by-lang">
+            <div class="c-lang">
+                <label class="material-checkbox">
+                    <input type="checkbox"> <span>All languages</span> </label>
+            </div>
+            <div class="c-lang">
+                <label class="material-checkbox">
+                    <input type="checkbox"> <span>English</span> </label>
+            </div>
+            <div class="c-lang">
+                <label class="material-checkbox">
+                    <input type="checkbox"> <span>Hindi</span> </label>
+            </div>
+            <div class="c-lang">
+                <label class="material-checkbox">
+                    <input type="checkbox"> <span>Telugu</span> </label>
+            </div>
+        </div>
+        <div class="search-by-lang">
+            <div class="c-lang">
+
+                <label class="material-checkbox">
+                    <input type="checkbox"> <span>All Genres</span>
+                </label>
+                <div class="c-lang">
+                    <label class="material-checkbox">
+                        <input type="checkbox"> <span>Adventure</span>
+                    </label>
+                </div>
+                <div class="c-lang">
+                    <label class="material-checkbox">
+                        <input type="checkbox"> <span>Comedy</span>
+                    </label>
+                </div>
+                <div class="c-lang">
+                    <label class="material-checkbox">
+                        <input type="checkbox"> <span>Drama</span>
+                    </label>
+                </div>
+
+                <div class="c-lang">
+                    <label class="material-checkbox">
+                        <input type="checkbox"> <span>Horror</span>
+                    </label>
+                </div>
+                <div class="c-lang">
+                    <label class="material-checkbox">
+                        <input type="checkbox"> <span>Romance</span>
+                    </label>
+                </div>
+                <div class="c-lang">
+                    <label class="material-checkbox">
+                        <input type="checkbox"> <span>Sci-FiThriller</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="col-md-9 movies-now-playing" ng-controller="NowShowingCtrl">
+        <h3 class="m-head">Latest Movies</h3>
+        <div class="col-md-4 movie-preview" ng-repeat="latestMovie in latestMovieData">
+            <a ui-sref="movie-single" class="mask">
+                <img ng-src="{{latestMovie.image}}" class="img-responsive zoom-img" alt="" />
+                <div class="m-movie-title">
+                    <a class="m-movie-link" href="movie-single.html">{{latestMovie.name}}</a>
+                    <div class="clearfix"></div>
+                    <div class="m-r-date">
+                        <p><i class="fa fa-calendar-o"></i>{{latestMovie.date}}</p>
+                        <a ui-sref="movie-select-show">book now</a>
+                    </div>
+                    <div class="m-r-like">
+                        <i class="fa fa-thumbs-up"></i>
+                        <p>rocking</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="now-showing-movies">
+    <h3 class="m-head">Next Change & Coming Soon</h3>
+    <div class="col-md-3 movie-preview">
+        <a href="movie-single.html" class="mask">
+            <img src="assets/images/pic-1.jpg" class="img-responsive zoom-img" alt="" />
+            <div class="m-movie-title">
+                <a class="m-movie-link" href="movie-single.html">Baby</a>
+                <div class="clearfix"></div>
+                <div class="m-r-date">
+                    <p><i class="fa fa-calendar-o"></i>3 Jul, 2015</p>
+                </div>
+                <div class="m-r-like">
+                    <p>want to see <span>87</span>%</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 movie-preview">
+        <a href="movie-single.html" class="mask">
+            <img src="assets/images/pic-10.jpg" class="img-responsive zoom-img" alt="" />
+            <div class="m-movie-title">
+                <a class="m-movie-link" href="movie-single.html">Bezubaan Ishq (U)</a>
+                <div class="clearfix"></div>
+                <div class="m-r-date">
+                    <p><i class="fa fa-calendar-o"></i>3 Jul, 2015</p>
+                </div>
+                <div class="m-r-like">
+                    <p>want to see <span>75</span>%</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 movie-preview">
+        <a href="movie-single.html" class="mask">
+            <img src="assets/images/pic-12.jpg" class="img-responsive zoom-img" alt="" />
+            <div class="m-movie-title">
+                <a class="m-movie-link" href="movie-single.html">Guddu Rangeela (U/A)</a>
+                <div class="clearfix"></div>
+                <div class="m-r-date">
+                    <p><i class="fa fa-calendar-o"></i>3 Jul, 2015</p>
+                </div>
+                <div class="m-r-like">
+                    <p>want to see <span>94</span>%</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 movie-preview">
+        <a href="movie-single.html" class="mask">
+            <img src="assets/images/pic-2.jpg" class="img-responsive zoom-img" alt="" />
+            <div class="m-movie-title">
+                <a class="m-movie-link" href="movie-single.html">James Bond</a>
+                <div class="clearfix"></div>
+                <div class="m-r-date">
+                    <p><i class="fa fa-calendar-o"></i>3 Jul, 2015</p>
+                </div>
+                <div class="m-r-like">
+                    <p>want to see <span>91</span>%</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 movie-preview">
+        <a href="movie-single.html" class="mask">
+            <img src="assets/images/pic-3.jpg" class="img-responsive zoom-img" alt="" />
+            <div class="m-movie-title">
+                <a class="m-movie-link" href="movie-single.html">Malupu</a>
+                <div class="clearfix"></div>
+                <div class="m-r-date">
+                    <p><i class="fa fa-calendar-o"></i>3 Jul, 2015</p>
+                </div>
+                <div class="m-r-like">
+                    <p>want to see <span>90</span>%</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 movie-preview">
+        <a href="movie-single.html" class="mask">
+            <img src="assets/images/pic-4.jpg" class="img-responsive zoom-img" alt="" />
+            <div class="m-movie-title">
+                <a class="m-movie-link" href="movie-single.html">Online Binline</a>
+                <div class="clearfix"></div>
+                <div class="m-r-date">
+                    <p><i class="fa fa-calendar-o"></i>3 Jul, 2015</p>
+                </div>
+                <div class="m-r-like">
+                    <p>want to see <span>92</span>%</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+    <div class="clearfix"></div>
+</div> 
